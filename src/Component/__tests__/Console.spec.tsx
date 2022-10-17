@@ -1,7 +1,10 @@
-import * as React from 'react'
+import React from 'react'
 import { shallow } from 'enzyme'
 
+React.useLayoutEffect = React.useEffect
+
 import Console from '..'
+import ConsoleMessage from '../Message'
 
 it('renders', () => {
   const result = shallow(
@@ -114,23 +117,26 @@ it('linkify object and pass options', () => {
 })
 
 it('allows all types methods', () => {
-  return (
-    <Console
-      logs={[
-        { method: 'log', id: 'id', data: [] },
-        { method: 'debug', id: 'id', data: [] },
-        { method: 'info', id: 'id', data: [] },
-        { method: 'warn', id: 'id', data: [] },
-        { method: 'error', id: 'id', data: [] },
-        { method: 'table', id: 'id', data: [] },
-        { method: 'clear', id: 'id', data: [] },
-        { method: 'time', id: 'id', data: [] },
-        { method: 'timeEnd', id: 'id', data: [] },
-        { method: 'count', id: 'id', data: [] },
-        { method: 'assert', id: 'id', data: [] },
-        { method: 'result', id: 'id', data: [] },
-        { method: 'command', id: 'id', data: [] },
-      ]}
-    />
+  const methods = [
+    'log',
+    'debug',
+    'info',
+    'warn',
+    'error',
+    'table',
+    'clear',
+    'time',
+    'timeEnd',
+    'count',
+    'assert',
+    'result',
+    'command',
+  ] as const
+  const result = shallow(
+    <Console logs={methods.map((method) => ({ method, id: 'id', data: [] }))} />
   )
+  expect(result.find(ConsoleMessage).length).toBe(methods.length)
+  methods.forEach((method) => {
+    expect(result.html()).toContain(`data-method="${method}"`)
+  })
 })
