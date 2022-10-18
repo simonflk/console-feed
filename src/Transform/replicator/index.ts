@@ -4,6 +4,10 @@ const CIRCULAR_REF_KEY = '@r'
 const KEY_REQUIRE_ESCAPING_RE = /^#*@(t|r)$/
 
 const GLOBAL = (function getGlobal() {
+  if (typeof globalThis !== 'undefined') {
+    return globalThis
+  }
+
   // NOTE: see http://www.ecma-international.org/ecma-262/6.0/index.html#sec-performeval step 10
   const savedEval = eval
 
