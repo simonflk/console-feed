@@ -3,8 +3,8 @@ import { Theme } from '../../definitions/Component'
 import { withTheme } from '@emotion/react'
 import { Root } from '../react-inspector/elements'
 
-import Linkify from 'linkifyjs/react'
-import type { Options } from 'linkifyjs'
+import Linkify from 'linkify-react'
+import type { Opts } from 'linkifyjs'
 import { Message } from '../../definitions/Component'
 import Inspector from '../react-inspector'
 
@@ -12,7 +12,7 @@ interface Props {
   log: Message
   quoted: boolean
   theme?: Theme
-  linkifyOptions?: Options
+  linkifyOptions?: Opts
 }
 
 class ObjectTree extends React.PureComponent<Props, any> {

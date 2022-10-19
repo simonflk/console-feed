@@ -6256,6 +6256,16 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
+linkify-html@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/linkify-html/-/linkify-html-4.0.2.tgz#f55e58ee27b4e34793f03a0bf81910c8a92151e5"
+  integrity sha512-YcN3tsyutK2Y/uSuoG0zne8FQdoqzrAgNU5ko0DWE7M2oQ3ms4z/202f2W4TvRm9uxKdrsWAullfynANLaVMqw==
+
+linkify-react@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/linkify-react/-/linkify-react-4.0.2.tgz#96fc81907b653d2de1fa21bfef7f8504114c226d"
+  integrity sha512-WFHnwOUo6EeKwrQQy1d+UjeKsv+SPQ9toPpaRIXHV1CMo+0kgZBSIsEBxQrFQIEy7WD20QD+sPwNNaJJpynN6g==
+
 linkifyjs@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/linkifyjs/-/linkifyjs-4.0.2.tgz#5844ea70f4427004e50036d983b66da50fe13389"

@@ -1,4 +1,4 @@
-import Linkify from 'linkifyjs/html'
+import Linkify from 'linkify-html'
 import formatMessageString from './format-message'
 
 /**
